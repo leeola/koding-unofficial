@@ -20,6 +20,7 @@ help in a place i think i can.
 
 
 
+<a name="feature-explanation" class="anchor"></a>
 ## Feature Exploration
 
 - The Kitchen Sink: Koding is big, but here are some of the highlights! *(Coming Soon)*
@@ -27,6 +28,7 @@ help in a place i think i can.
 
 
 
+<a name="frequently-asked-questions" class="anchor"></a>
 ## Frequently Asked Questions
 
 - How do i setup FTP?
@@ -36,10 +38,13 @@ help in a place i think i can.
 
 
 
+<a name="koding-tips" class="anchor"></a>
 ## Koding Tips
 
 - Reinitializing your VM: the magic reset everything button *(Coming Soon)*
 
 
+
+<a name="credits" class="anchor"></a>
 ## Credits
 
