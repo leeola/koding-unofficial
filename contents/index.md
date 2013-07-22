@@ -11,7 +11,7 @@ provide a well rounded guide to making the best use of
 [Koding](https://koding.com) as possible.
 If you have any requests, issues, or something doesn’t quite make sense
 then please
-[submit submit an issue](https://github.com/leeolayvar/koding-unofficial/issues/new)
+[submit an issue](https://github.com/leeolayvar/koding-unofficial/issues/new)
 and we can help the Koding community grow, *together*. :)
 
 **Disclaimer**: I am a Koding user like any other, so i make no claims to know
@@ -20,7 +20,7 @@ help in a place i think i can.
 
 
 
-<a name="feature-explanation" class="anchor"></a>
+<a name="feature-exploration" class="anchor"></a>
 ## Feature Exploration
 
 - The Kitchen Sink: Koding is big, but here are some of the highlights! *(Coming Soon)*
