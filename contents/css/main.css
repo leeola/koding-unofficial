@@ -81,6 +81,22 @@ hr {
   margin: 1.6em 0;
 }
 
+/* page sidebar */
+
+#sidebar {
+  float: right;
+  margin: 0 0 1em 1em;
+  font-size: 0.9em;
+}
+
+#sidebar ul {
+  margin: 0 0 0 1em;
+}
+
+#sidebar ul li {
+  margin: 0;
+}
+
 /* page header */
 
 .header {
@@ -376,8 +392,23 @@ code.lang-markdown .bullet {
 
 /* media queries */
 
+@media (min-width: 690px) {
+  #sidebar {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  #sidebar {
+    margin-right: -4em;
+  }
+}
+
 @media (min-width: 1600px) {
-  body { font-size: 26px; }
+  body { font-size: 23px; }
+  #sidebar {
+    margin-right: -6em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -401,19 +432,6 @@ code.lang-markdown .bullet {
   }
   .article {
     margin: 1em 0 2.5em;
-  }
-  .archive {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .archive * {
-    float: none !important;
-    line-height: 1.6 !important;
-    width: auto !important;
-    height: auto !important;
-    text-align: left !important;
-    border: 0 !important;
-    margin: 0 !important;
   }
   footer .nav {
     margin: 1em 0;

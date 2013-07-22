@@ -1,6 +1,7 @@
 !!! 5
 block vars
-  - var bodyclass = null;
+  - var bodyclass = "content-wrap";
+
 html(lang='en')
   head
     block head
@@ -17,25 +18,25 @@ html(lang='en')
   
   body(class=bodyclass)
     header.header
-      div.content-wrap
-        block header
-          div.logo
-            h1
-              a(href=locals.url)= locals.name
-            p.description= locals.description
+      block header
+        div.logo
+          h1
+            a(href=locals.url)= locals.name
+          p.description= locals.description
+    
+    div#sidebar
+      !=contents['sidebar.md'].html
     
     div#content
-      div.content-wrap
-        block content
-          h2 Default Content
+      block content
+        h2 Default Content
     
     footer
-      div.content-wrap
-        block footer
-          section.about
-            !=contents['about.md'].html
-          section.copy
-            p created on&nbsp;
-              a(href='https://koding.com') Koding
-              | &nbsp;and powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+      block footer
+        section.about
+          !=contents['about.md'].html
+        section.copy
+          p created on&nbsp;
+            a(href='https://koding.com') Koding
+            | &nbsp;and powered by&nbsp;
+            a(href='https://github.com/jnordberg/wintersmith') Wintersmith

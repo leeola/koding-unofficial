@@ -2,7 +2,7 @@
 extends layout
 
 block append vars
-  - bodyclass = 'article-detail'
+  - bodyclass += ' article-detail'
 
 block prepend title
   | #{ page.title + " - "}
@@ -20,6 +20,6 @@ block content
 
 block prepend footer
   div.nav
-    a(href=contents.index.url) « Back to Index
+    a(href=contents.index.url) « Back to Home
 
 
