@@ -15,7 +15,7 @@ subdomains.
 
 The following video link is a quick explanation of Domain Management.
 
-[http://www.youtube.com/watch?v=31YloYb5kco](http://www.youtube.com/watch?v=31YloYb5kco)
+<iframe width="680" height="450" src="//www.youtube.com/embed/31YloYb5kco" frameborder="0" allowfullscreen></iframe>
 
 
 
