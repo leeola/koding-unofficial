@@ -8,7 +8,6 @@ block prepend title
   | #{ page.title + " - "}
 
 block header
-  include author
   h1= page.title
 
 block content
@@ -18,13 +17,3 @@ block content
 block prepend footer
   div.nav
     a(href='/') « Back to Home
-
-block append about
-  div.credits
-    | #{ " This guide was created by " }
-    mixin author(page.metadata.author)
-    - if (page.metadata.contributors != null)
-      | #{" with contributions by "}
-      mixin contributors(page.metadata.contributors)
-
-

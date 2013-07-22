@@ -34,9 +34,11 @@ html(lang='en')
     footer
       block footer
         section.about
-          !=contents['about.md'].html
-        section.copy
-          p created on&nbsp;
-            a(href='https://koding.com') Koding
-            | &nbsp;and powered by&nbsp;
-            a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+          block about
+            !=contents['about.md'].html
+      
+      section.copy
+        p created on&nbsp;
+          a(href='https://koding.com') Koding
+          | &nbsp;and powered by&nbsp;
+          a(href='https://github.com/jnordberg/wintersmith') Wintersmith

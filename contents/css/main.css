@@ -152,7 +152,7 @@ footer {
 footer .nav {
   text-align: center;
   margin-top: 5em;
-  margin-bottom: 3.5em;
+  margin-bottom: 1em;
 }
 
 footer .nav a {
@@ -173,6 +173,10 @@ footer .about {
   -moz-column-gap: 2em;
   -ms-column-gap: 2em;
   column-gap: 2em;
+}
+
+footer .about h4 {
+  margin-bottom: 1em;
 }
 
 footer .copy {

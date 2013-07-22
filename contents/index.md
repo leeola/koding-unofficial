@@ -1,9 +1,6 @@
 ---
 title: test blah
-author: baker
-authors: [baker, the-wintersmith]
-date: 2013-04-01
-template: guide.jade
+template: page.jade
 ---
 
 
