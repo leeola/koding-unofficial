@@ -24,17 +24,17 @@ help in a place i think i can.
 ## Feature Exploration
 
 - The Kitchen Sink: Koding is big, but here are some of the highlights! *(Coming Soon)*
-- [Domain Management](/guides/domain-management/): Managing which domain points to which VM.
+- [Domain Management](guides/domain-management/): Managing which domain points to which VM.
 
 
 
 <a name="frequently-asked-questions" class="anchor"></a>
 ## Frequently Asked Questions
 
-- [How do i setup FTP?](/guides/setting-up-ftp/)
-- [How do i install MySQL and phpMyAdmin?](/guides/installing-mysql-phpmyadmin/)
-- [How do i SSH into my VM?](/guides/ssh-into-your-vm/)
-- [How do i install Wordpress?](/guides/installing-wordpress/)
+- [How do i setup FTP?](guides/setting-up-ftp/)
+- [How do i install MySQL and phpMyAdmin?](guides/installing-mysql-phpmyadmin/)
+- [How do i SSH into my VM?](guides/ssh-into-your-vm/)
+- [How do i install Wordpress?](guides/installing-wordpress/)
 
 
 

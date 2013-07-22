@@ -1,6 +1,8 @@
 {
+  "baseUrl": "/koding-unofficial/",
   "locals": {
-    "url": "http://localhost:8080",
+    "baseUrl": "/koding-unofficial/",
+    "url": "http://leeolayvar.github.io/koding-unofficial",
     "name": "Koding Unofficial Documentation",
     "owner": "leeolayvar",
     "description": "Unofficial Documentation for Koding.com"
