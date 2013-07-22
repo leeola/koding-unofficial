@@ -1,24 +1,28 @@
 
 
-# [The Unofficial Koding Docs](https://github.com/leeolayvar/koding-unofficial/wiki)
+# Koding Unofficial: Community Guides & Wiki
+
+- [Guides](https://leeolayvar.github.io/koding-unofficial):
+  Guide & Video paired Koding documentation
+- [Wiki](https://github.com/leeolayvar/koding-unofficial/wiki):
+  General Community Wiki
+
 
 
 ## Description
 
-The Unofficial Koding Docs are my little attempt at writing a series of
-article<->video linked guides and tutorials focused around common problems
-and new feature exploration. Want to contribute?
-[Contact me](http://koding.com/leeolayvar)! Have questions need clarifications?
-Create [an issue](https://github.com/leeolayvar/koding-unofficial/issues/new)!
+The Unofficial Koding Docs is a community grown documentation project centered
+around [Koding](https://koding.com), an Online Development Environment that
+aims to bring free development and computing to all.
 
-## What about kWiki?
+This documentation effort is in two parts.
+[Guides](https://leeolayvar.github.io/koding-unofficial) and
+[Wiki](https://github.com/leeolayvar/koding-unofficial/wiki). The goal of
+the Guides is to have a large series of tutorial & video pairs which go over
+complete instructions on overcoming a common problem, common
+confusion, or just general information in Koding. The Wikis on the otherhand
+do what Wikis do best, community driven information. A little less organized
+sometimes, but nevertheless still quite needed.
 
-The Koding wiki is great, but i was hoping to work with something fresh and
-where i had total control over the content and posters. Wikis can be a bit
-cluttered and I'm trying to make something a bit more coordinated and fluid.
-If you think i am not, please
-[tell me about it](https://github.com/leeolayvar/koding-unofficial/issues/new)
-:)
-
-
-So, what do you say, [go check it out](https://github.com/leeolayvar/koding-unofficial/wiki) :)
+With the two, we hope to have one of the most supportive and informative
+communities available to all, over at [Koding](https://koding.com). :)

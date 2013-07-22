@@ -1,0 +1,21 @@
+
+mixin author(authorName)
+  - var author = contents.authors[authorName + '.json']
+  span.author
+    if author
+      a(href=author.metadata.link)= author.metadata.name
+    else
+      =authorName
+
+mixin contributors(contributorNames)
+  - var comma = false
+  - each contributorName in contributorNames
+    - if (comma)
+      ,&nbsp;
+    - var contributor = contents.authors[contributorName + '.json']
+    span.contributor
+      if contributor
+        a(href=contributor.metadata.link)= contributor.metadata.name
+      else
+        =contributorName
+    - comma = true

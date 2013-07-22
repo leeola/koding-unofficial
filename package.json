@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "koding-unofficial",
+  "description": "Unofficial Koding guides and tutorials.",
+  "author": "leeolayvar <leeolayvar@gmail.com> (http://leeolayvar.kd.io)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leeolayvar/koding-unofficial.git"
+  },
+  "bugs": {
+    "url": "http://github.com/leeolayvar/koding-unofficial/issues"
+  },
+  "dependencies": {
+    "moment": "2.x",
+    "underscore": "1.4.x",
+    "typogr": "0.5.x"
+  }
+}

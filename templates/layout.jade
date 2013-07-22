@@ -1,0 +1,45 @@
+!!! 5
+block vars
+  - var bodyclass = "content-wrap";
+
+html(lang='en')
+  head
+    block head
+      base(href=locals.baseUrl)
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      
+      title
+        block title
+          = locals.name
+      
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
+      link(rel='stylesheet', href='css/main.css')
+  
+  body(class=bodyclass)
+    header.header
+      block header
+        div.logo
+          h1
+            a(href=locals.url)= locals.name
+          p.description= locals.description
+    
+    div#sidebar
+      !=contents['sidebar.md'].html
+    
+    div#content
+      block content
+        h2 Default Content
+    
+    footer
+      block footer
+        section.about
+          block about
+            !=contents['about.md'].html
+      
+      section.copy
+        p created on&nbsp;
+          a(href='https://koding.com') Koding
+          | &nbsp;and powered by&nbsp;
+          a(href='https://github.com/jnordberg/wintersmith') Wintersmith

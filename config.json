@@ -1,0 +1,24 @@
+{
+  "baseUrl": "/koding-unofficial/",
+  "locals": {
+    "baseUrl": "/koding-unofficial/",
+    "url": "http://leeolayvar.github.io/koding-unofficial",
+    "name": "Koding Unofficial Documentation",
+    "owner": "leeolayvar",
+    "description": "Unofficial Documentation for Koding.com"
+  },
+  "plugins": [
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}
