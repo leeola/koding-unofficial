@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/koding-unofficial/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>SSH Into Your VM - Koding Unofficial Documentation
+    </title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body class="content-wrap article-detail">
+    <header class="header">
+      <h1>SSH Into Your VM</h1>
+    </header>
+    <div id="sidebar"><ul>
+<li><a href="/koding-unofficial/">Home</a></li>
+<li><a href="/koding-unofficial/#feature-exploration">Feature Exploration</a></li>
+<li><a href="/koding-unofficial/#frequently-asked-questions">FAQ</a></li>
+<li><a href="/koding-unofficial/#koding-tips">Koding Tips</a></li>
+<li><a href="https://github.com/leeolayvar/koding-unofficial/wiki">Wiki</a></li>
+<li><a href="https://github.com/leeolayvar/koding-unofficial/issues/new">Submit an Issue</a></li>
+</ul>
+
+    </div>
+    <div id="content">
+      <article class="article">
+        <section class="content"><p>In this tutorial, we will go over the steps to SSHing into your <span class="caps">VM</span>! This
+is a semi-experimental tutorial, so if you have any problems please make
+sure to
+<a href="https://github.com/leeolayvar/koding-unofficial/issues/new">submit an issue</a>
+and we can help make this a rock solid tutorial for all skill levels&nbsp;:)</p>
+<p>Note that we will only be covering Unix based OSs. If someone wants to
+give me information on how this can be done on Windows, i&#39;ll be happy
+to add a windows&nbsp;section!</p>
+<p><strong>Reminder</strong>: As with all of these tutorials, they assume that there are no
+conflicts. If you have previously attempted to install this software please
+remove it fully or understand that conflicts may occur. Thanks&nbsp;:)</p>
+<h2>Video</h2>
+<p>The following is an instructional video which approximately
+mirrors the steps below. It covers both App, and Manual,&nbsp;installations.</p>
+<p><a href="http://www.youtube.com/watch?v=h_l6hElWoj4"><a href="http://www.youtube.com/watch?v=h_l6hElWoj4">http://www.youtube.com/watch?v=h_l6hElWoj4</a></a></p>
+<h2>What you will&nbsp;need</h2>
+<p>In this tutorial, i am going to use the terminology of “Home” and “Koding”
+machines. Home being whatever the machine you are using to connect to
+Koding with. Koding being the machine that is receiving the connection.
+Home -&gt;&nbsp;Koding.</p>
+<p>On the home machine, you will need a public rsa key <em>(usually found
+in <code>~/.ssh/id_rsa.pub</code>)</em>. If you need to generate one, please
+<a href="https://help.github.com/articles/generating-ssh-keys">refer to the Github tutorial on this</a>.
+You will also need your Username, and your <span class="caps">VM</span>&nbsp;Number.</p>
+<p>To find your <span class="caps">VM</span> number, open your terminal for the VM you wish to ssh into,
+and look for the <em>username@vm-0:~$</em>, where <em>vm-0</em>, <em>vm-1</em>,
+<em>vm-2</em>, etc, is your vm&nbsp;number.</p>
+<p><strong>Feedback</strong>: If you feel Generating an <span class="caps">SSH</span> Key would be very helpful on this
+tutorial, feel free to
+<a href="https://github.com/leeolayvar/koding-unofficial/issues/new">let me know</a>&nbsp;:)</p>
+<h2>Tutorial&nbsp;Steps</h2>
+<ol>
+<li><p>First, copy your Public Key, usually found in <code>~/.ssh/id_rsa.pub</code>, and copy
+it in it&#39;s entirety! It will look something like&nbsp;this:</p>
+<pre><code>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyhKankDE4DRM86JqZ3JPdWDeqg+TbzlqlTLf
+OKTeokhRoMgy5WoMY/ZWUVES3d2vSHHwW3cwWlELmVdc3Ow57boZv3fOsPhybYHVRTClXYr1ncS
+xyTvjvCfvV5q22aIxHPWQ353543ssda87sa+85XEa4VnveJsEzxBZl4oJ4GB0AGa48+UdIqutrg
+Zu7D7JCK+Yl228X+3bJf3ddlqDaKaVXPivvvYqImK6ZwFsxh2lNO4E8IOd3OSK9zv6i+io8PxWm
+wP0tLFokxulAI8Td1sOPBE9s9bdJ5c2T/GfGjKF+aNKsd33TsYEjjc/plMZmRRrOgQwre6OAkgM
+vyV2X foo@bar.baz</code></pre>
+</li>
+<li><p>Next, paste this entire Public Key into your <span class="caps">SSH</span> Keys section of your
+Account settings. This can be found by going to
+<a href="https://koding.com/Account">koding/Account</a> and clicking <span class="caps">SSH</span> Keys
+under the DEVELOP. Click the Plus button on the right side of the page,
+and paste your Public Key into this. Below is a screenshot of this area
+for clarification.
+<img src="/koding-unofficial/guides/ssh-into-your-vm/sshkeys.png" alt="Koding SSH Keys"></p>
+</li>
+<li><p>Now go back to your Home machine, and create the file
+<code>~/.ssh/config</code> <em>(assuming it&#39;s not already created)</em>. Add the following
+code into that&nbsp;file:</p>
+<pre><code>Host *.kd.io
+ User &lt;username&gt;
+ ProxyCommand ssh %r@ssh.koding.com nc %h %p</code></pre>
+<p>Where <code>&lt;username&gt;</code> is your username, without the <code>&lt;&gt;</code>.</p>
+</li>
+<li><p>Next, on your Home machine and connect to your <span class="caps">VM</span>! This can be
+done by typing: <code>ssh &lt;vm-Number&gt;.&lt;username&gt;.koding.kd.io</code>. An example,
+here is my connection command: <code>ssh vm-0.leeolayvar.koding.kd.io</code>.</p>
+<p>You will have to enter your local <span class="caps">SSH</span> password, if you chose one when you
+created your key. After that, presented with <code>username@vm-X:~$</code>, singaling
+that you have connected&nbsp;successfully.</p>
+<h4>Possible Gotcha:&nbsp;~/.ssh/authorized_keys</h4>
+<p>You do <em>not</em> need to use authorized_keys in the Koding VMs. The
+Account Settings -&gt; <span class="caps">SSH</span> Keys takes care of the authorization for&nbsp;you.</p>
+<h4>Possible Gotcha: Agent admitted&nbsp;failure?</h4>
+<p>If you receive an error when you attempt to connect, matching the following&nbsp;description:</p>
+<pre><code>Agent admitted failure to sign using the key.</code></pre>
+<p>Then run the command <code>ssh-add</code>. For additional information on this gotcha,
+see the
+<a href="https://help.github.com/articles/error-agent-admitted-failure-to-sign">Github Help Page</a>
+on the&nbsp;subject.</p>
+</li>
+</ol>
+<h2>Confirming your&nbsp;Installation</h2>
+<p>The best way to confirm your installation is simply by connecting to your
+Koding <span class="caps">VM</span>. For information on this, see Step #3&nbsp;above.</p>
+<h2>Additional&nbsp;Resources</h2>
+<ul>
+<li><a href="https://help.github.com/articles/error-agent-admitted-failure-to-sign">Agent Failure&nbsp;Information</a></li>
+</ul>
+</section>
+      </article>
+    </div>
+    <footer>
+      <div class="nav"><a href="">« Back to Home</a></div>
+      <section class="about"><h4>Having Trouble, or Is Something Outdated?</h4>
+<p>Koding changes quite rapidly, so if one of these guides are outdated,
+or if something just doesn&#39;t quite make sense to you, please
+<a href="https://github.com/leeolayvar/koding-unofficial/issues/new">submit an issue</a> on the matter. Doing this will help me keep these guides
+up to date, and help any Koders using these guides after you. Thanks!</p>
+
+        <div class="credits"> This guide was created by <span class="author"><a href="http://leeolayvar.kd.io">Lee Olayvar</a></span>
+        </div>
+      </section>
+      <section class="copy">
+        <p>created on&nbsp;<a href="https://koding.com">Koding</a>&nbsp;and powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/koding-unofficial/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Installing Wordpress - Koding Unofficial Documentation
+    </title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body class="content-wrap article-detail">
+    <header class="header">
+      <h1>Installing Wordpress</h1>
+    </header>
+    <div id="sidebar"><ul>
+<li><a href="/koding-unofficial/">Home</a></li>
+<li><a href="/koding-unofficial/#feature-exploration">Feature Exploration</a></li>
+<li><a href="/koding-unofficial/#frequently-asked-questions">FAQ</a></li>
+<li><a href="/koding-unofficial/#koding-tips">Koding Tips</a></li>
+<li><a href="https://github.com/leeolayvar/koding-unofficial/wiki">Wiki</a></li>
+<li><a href="https://github.com/leeolayvar/koding-unofficial/issues/new">Submit an Issue</a></li>
+</ul>
+
+    </div>
+    <div id="content">
+      <article class="article">
+        <section class="content"><p>In this tutorial, we will we will go over the basics of getting wordpress
+installed on Koding. Note that this is the same as on Ubuntu/etc, but
+some users requested this&nbsp;:)</p>
+<p><strong>Reminder</strong>: As with all of these tutorials, they assume that there are no
+conflicts. If you have previously attempted to install this software please
+remove it fully or understand that conflicts may occur. Thanks&nbsp;:)</p>
+<h2>Video</h2>
+<p><strong><em>(Video Coming&nbsp;Soon)</em></strong></p>
+<h2>What you will&nbsp;need</h2>
+<p>You will need to know a few things for this&nbsp;tutorial:</p>
+<ul>
+<li>Your Koding password <em>(which is also your Root&nbsp;pass)</em></li>
+<li>Your <span class="caps">VM</span> Connection&nbsp;URL</li>
+<li>Your MySQL Root&nbsp;Username</li>
+<li>Your MySQL Root&nbsp;Password</li>
+</ul>
+<p>You will also need to have MySQL previously installed. If you need to
+install MySQL please check out
+[[this tutorial|MySQL phpMyAdmin&nbsp;Installation]].</p>
+<h2>Steps for&nbsp;Installation</h2>
+<p>In this tutorial we are going to start from a fresh installation, and
+install it into the root&nbsp;folder.</p>
+<ol>
+<li><p>We&#39;ll start by downloading and untaring Wordpress into ~/wordpress,
+with the following command:
+<code>curl wordpress.org/latest.tar.gz | tar xz</code></p>
+</li>
+<li><p>Next, we&#39;ll backup the <code>~/Web</code> directory, and replace it with <code>~/wordpress</code>
+with the following command:
+<code>mv Web Web.bkp &amp;&amp; mv wordpress Web</code></p>
+</li>
+<li><p>Next, we need to copy the sample Wordpress config, so that we can run
+the config setup later. Enter the following command:
+<code>cp Web/wp-config-sample.php Web/wp-config.php</code></p>
+</li>
+<li><p>Next, we&#39;re going to set the <code>chmod</code> of the directory so that Wordpress
+can write it&#39;s only configuration file. To do that,&nbsp;run:</p>
+<p><code>chmod 777 Web</code></p>
+</li>
+<li><p>By default, php5-mysql is also missing, so to install that enter:
+<code>sudo apt-get install php5-mysql</code></p>
+</li>
+<li><p>If you already have a database and MySQL user setup, you can skip this step.
+If not, we need to create a MySQL database and a MySQL User for&nbsp;wordpress.</p>
+<p>First, login to mysql with your Root User&nbsp;with:</p>
+<p><code>mysql -uroot -p</code></p>
+<p>Enter your MySQL Root password at the prompt. Reminder, this is your MySQL
+Root password, <em>not your Koding password</em>.</p>
+<p>Now you should be logged into MySQL, and your prompt should look like
+<code>mysql&gt;</code>. We will need to type three commands, all of which you can
+copy and modify. Take care to replace <code>&lt;dbname&gt;</code> with the name of the
+database you would like Wordpress to use, same for <code>&lt;wpuser&gt;</code> and <code>&lt;wppass&gt;</code>.
+The commands&nbsp;are:</p>
+<p><code>CREATE DATABASE &lt;dbname&gt;;</code></p>
+<pre><code>GRANT ALL PRIVILEGES ON &lt;dbname&gt;.* TO &quot;&lt;wpuser&gt;&quot;@&quot;localhost&quot; IDENTIFIED BY &quot;&lt;dbpass&gt;&quot;;</code></pre>
+<p><code>FLUSH PRIVILEGES;</code></p>
+<p>An example of what this might look like if i created the database
+<code>wordpress</code> with the username <code>wpusername</code> and the password <code>wpuserpass</code>
+can be seen&nbsp;below:</p>
+<pre><code>leeolayvar@vm-0:~$ mysql -uroot -proot
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 48
+Server version: 5.5.31-0ubuntu0.13.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&gt; CREATE DATABASE wordpress;
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; GRANT ALL PRIVILEGES ON wordpress.* TO &quot;wpusername&quot;@&quot;localhost&quot; IDENTIFIED BY &quot;wpuserpass&quot;;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt;</code></pre>
+</li>
+<li><p>We&#39;re almost done! Now we can navigate to our wordpress config setup.
+To do this, navigate to
+<code>http://&lt;username&gt;.kd.io/wp-admin/setup-config.php?step=1</code>.
+where <code>&lt;username&gt;</code> is your&nbsp;username.</p>
+<p>Enter in the database, wpuser, and wppass that we created above and press
+submit. You can leave the database host as <code>localhost</code> and the table prefix
+as <code>wp_</code>. An example of this filled out with the information from my above
+example is below.&nbsp;[[setup-config.png]]</p>
+<h4>Possible Gotcha: Sorry, but I can’t write the wp-config.php&nbsp;file.</h4>
+<p>If you receive the following message after pressing submit, your <code>chmod</code>
+is incorrectly configured. Please revisit Step 03, then retry
+this&nbsp;step.</p>
+<h4>Possible Gotcha: Error establishing a database&nbsp;connection</h4>
+<p>If you receive an error establishing a database connection, ensure
+that your host is localhost, and your database name, username, and pass
+are correct. If you need to revisit Step 05 you can, then revisit this&nbsp;step.</p>
+</li>
+<li><p>All right sparky! If you have successfully received the message starting
+with <em>&quot;All right sparky!&quot;</em> then you&#39;re good to go! Your WordPress
+is ready to be installed via the automatic configuration. Press <strong>Run
+the install</strong> and proceed with the normal Wordpress&nbsp;installation.</p>
+</li>
+</ol>
+<h2>Confirming your&nbsp;Installation</h2>
+<p>After Step 07, you can confirm your working wordpress by simple visiting
+your connection url <em>(eg: <code>http://username.kd.io</code>)</em>. You should be
+redirected to <code>/wp-admin/install.php</code> and can continue with the&nbsp;setup.</p>
+<h2>Additional&nbsp;Resources</h2>
+<ul>
+<li><a href="http://wordpress.org/">WordPress.org</a></li>
+<li><a href="http://wordpress.org/download/">Wordpress&nbsp;Download</a></li>
+</ul>
+</section>
+      </article>
+    </div>
+    <footer>
+      <div class="nav"><a href="">« Back to Home</a></div>
+      <section class="about"><h4>Having Trouble, or Is Something Outdated?</h4>
+<p>Koding changes quite rapidly, so if one of these guides are outdated,
+or if something just doesn&#39;t quite make sense to you, please
+<a href="https://github.com/leeolayvar/koding-unofficial/issues/new">submit an issue</a> on the matter. Doing this will help me keep these guides
+up to date, and help any Koders using these guides after you. Thanks!</p>
+
+        <div class="credits"> This guide was created by <span class="author"><a href="http://leeolayvar.kd.io">Lee Olayvar</a></span>
+        </div>
+      </section>
+      <section class="copy">
+        <p>created on&nbsp;<a href="https://koding.com">Koding</a>&nbsp;and powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </footer>
+  </body>
+</html>
