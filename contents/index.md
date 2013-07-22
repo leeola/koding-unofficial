@@ -31,10 +31,10 @@ help in a place i think i can.
 <a name="frequently-asked-questions" class="anchor"></a>
 ## Frequently Asked Questions
 
-- How do i setup FTP?
-- How do i install MySQL and phpMyAdmin?
-- How do i SSH into my VM?
-- How do i install Wordpress?
+- [How do i setup FTP?](/guides/setting-up-ftp/)
+- [How do i install MySQL and phpMyAdmin?](/guides/installing-mysql-phpmyadmin/)
+- [How do i SSH into my VM?](/guides/ssh-into-your-vm/)
+- [How do i install Wordpress?](/guides/installing-wordpress/)
 
 
 
