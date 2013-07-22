@@ -24,7 +24,7 @@ The following video link is a quick explanation of Domain Management.
 Here we will cover how to change the VM that you see when you connect
 to `http://username.kd.io`.
 
-1. First, go to **You Environments**, which can be found in the lower right
+1. First, go to **Your Environments**, which can be found in the lower right
   of your [Develop](http://koding.com/Develop) area, and click the Gear
   at the bottom. An image is below, the gear is in the lower right of the
   image.
