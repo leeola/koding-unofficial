@@ -1,25 +1,45 @@
 ---
-title: test blah
+title: Koding Unofficial Documentation
 template: page.jade
 ---
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu placerat sem. Nunc massa nibh, molestie in mollis et, dignissim in libero. Phasellus gravida nisi ut dolor fringilla, cursus iaculis enim sagittis. Donec id suscipit nunc. Cras vel congue mi, nec accumsan sapien. Donec pellentesque eleifend molestie. In at orci magna. Vivamus non feugiat magna, nec feugiat nisi. Donec dolor diam, ultrices sit amet nisl eu, auctor dapibus eros. Proin vehicula, eros eu laoreet scelerisque, orci libero condimentum sem, in vehicula erat tortor egestas felis. Maecenas dictum augue et leo ultrices fringilla. Fusce nisi erat, sollicitudin eget sem et, interdum ornare metus. Maecenas consequat fermentum nibh et auctor. Maecenas eu lobortis nisl, vitae rutrum risus. Vestibulum sed ligula eget est tincidunt commodo. Integer rutrum odio ut ipsum condimentum, ac faucibus nibh fermentum.
+The Koding Unofficial Documentation is an ongoing effort to create a series
+of guides that, when combined with the
+[Koding Unofficial Wiki](https://github.com/leeolayvar/koding-unofficial/wiki),
+provide a well rounded guide to making the best use of
+[Koding](https://koding.com) as possible.
+If you have any requests, issues, or something doesn’t quite make sense
+then please
+[submit submit an issue](https://github.com/leeolayvar/koding-unofficial/issues/new)
+and we can help the Koding community grow, *together*. :)
 
-Aliquam sodales nisl at congue venenatis. Cras fermentum quam magna. Sed quis dictum ligula. Cras vel interdum erat, quis volutpat sem. Morbi elementum risus enim, placerat pretium erat dapibus sed. Morbi posuere auctor vestibulum. Duis a ante a velit lacinia pellentesque in a augue. Ut pellentesque orci non lectus porta, non molestie lorem convallis. Maecenas in consectetur tortor. In porta suscipit nunc. Sed nec fermentum erat. Suspendisse lectus ipsum, ullamcorper at lectus eu, accumsan egestas erat. Vivamus accumsan molestie velit, in pellentesque erat dictum laoreet. Nam id congue lectus. Nulla eget turpis id dolor aliquam pharetra in a eros.
+**Disclaimer**: I am a Koding user like any other, so i make no claims to know
+any fancy tricks or in depth Linux solutions for your life. I am simply trying to
+help in a place i think i can.
 
-Cras sed tortor eu neque vulputate tincidunt a a ligula. Mauris elementum nulla at erat semper iaculis. Suspendisse tristique dui a lectus vulputate gravida. Aenean at feugiat metus. Vestibulum non ultrices augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam et magna vulputate, lobortis nunc a, sollicitudin elit.
 
-Proin quis lorem eu arcu ullamcorper euismod. Integer tristique elit ut purus dictum commodo. Vestibulum rutrum ultrices scelerisque. Curabitur mi lectus, pretium at tincidunt sed, lobortis eu diam. Maecenas porttitor vitae felis quis blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut tincidunt mi sit amet blandit luctus. Nulla pretium at neque ut laoreet.
 
-Phasellus vel nisl felis. Aliquam eu massa gravida elit luctus lobortis. Aenean tortor est, aliquam auctor suscipit non, tempus eget nisi. Nunc at arcu dictum, egestas elit nec, vulputate odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut felis sed tellus accumsan placerat et sit amet nibh. Vivamus aliquam tortor vitae risus auctor tempus. Nam ac neque massa. Fusce pellentesque, leo sed tincidunt cursus, orci magna congue dolor, porttitor ornare elit justo ac sapien. Maecenas at diam in tortor sollicitudin scelerisque non non dui. Morbi vulputate lacus mauris, vitae malesuada felis convallis non.
+## Feature Exploration
 
-Integer at eros vitae augue luctus rutrum. Vestibulum tellus purus, ullamcorper sit amet lectus id, posuere pellentesque eros. Aliquam erat volutpat. Sed scelerisque euismod iaculis. Curabitur eget placerat metus, sollicitudin lacinia neque. Vivamus pretium consequat felis at eleifend. Quisque vitae nulla lectus. Morbi erat nibh, auctor ut augue eu, consectetur sodales mauris. Nam eu urna ac lacus gravida posuere id sit amet augue. Donec tristique ultricies quam, eget porta lectus. Nam ultrices orci et pretium convallis. Morbi aliquet venenatis faucibus. Nam porttitor sollicitudin semper. Etiam euismod mi ut orci tempus blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vitae vestibulum nisi, sagittis congue quam.
+- The Kitchen Sink: Koding is big, but here are some of the highlights! *(Coming Soon)*
+- [Domain Management](/guides/domain-management/): Managing which domain points to which VM.
 
-In hac habitasse platea dictumst. Duis luctus aliquet neque, eget pulvinar enim egestas sed. Mauris eget lacus ornare, feugiat lorem in, pellentesque diam. Pellentesque lobortis augue eu neque porttitor, vitae blandit erat semper. In at vulputate tellus. Fusce viverra, nisi et viverra blandit, neque lacus facilisis dui, vitae malesuada ipsum erat sed justo. Nulla facilisi. Praesent tellus massa, placerat at ullamcorper quis, accumsan non nisi.
 
-Morbi lacinia sem a sapien mattis consectetur faucibus ut tortor. Donec sed ipsum sed enim tincidunt condimentum. Suspendisse sit amet libero gravida, rutrum justo in, iaculis lorem. Morbi mattis odio tristique dui euismod pharetra. Integer ultricies fermentum suscipit. In feugiat, diam a posuere tincidunt, lorem enim bibendum lacus, eget pharetra est nunc non ligula. Integer lobortis ut tortor non porta. Maecenas tincidunt, sem vitae mollis porta, nunc arcu tristique felis, sit amet rhoncus nunc mi in neque.
 
-Pellentesque nec libero est. Duis ut tincidunt ipsum, sit amet feugiat purus. Mauris mattis, diam cursus porta congue, turpis felis consequat lorem, id porta dui velit sed neque. Morbi dolor urna, ullamcorper eu ligula eu, accumsan pharetra urna. Nullam in dignissim nisl, eu varius lectus. Nulla sit amet felis arcu. Proin cursus dui urna, non tincidunt tellus venenatis in. Fusce vulputate dignissim neque ut luctus.
+## Frequently Asked Questions
 
-Curabitur semper ornare sem, eget sagittis neque pharetra sit amet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed elementum elementum lacus eget sagittis. Ut posuere magna at nibh aliquet, et aliquet urna accumsan. Maecenas nec vulputate urna. Cras elit est, rhoncus a dolor ac, tempor congue erat. Cras gravida urna quis purus pellentesque dignissim. In imperdiet lectus sit amet tellus condimentum varius. Nullam id bibendum dui, id adipiscing neque. Vivamus id ante sollicitudin, porttitor arcu eu, ornare eros. Morbi eget metus ac quam bibendum accumsan at sit amet nunc. Suspendisse eleifend erat commodo, dictum erat vitae, tincidunt eros.
+- How do i setup FTP?
+- How do i install MySQL and phpMyAdmin?
+- How do i SSH into my VM?
+- How do i install Wordpress?
+
+
+
+## Koding Tips
+
+- Reinitializing your VM: the magic reset everything button *(Coming Soon)*
+
+
+## Credits
+
