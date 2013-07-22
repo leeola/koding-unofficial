@@ -48,7 +48,7 @@ PureFTPd
 on any VM other than your first, please see the Manual Installation
 section below.
 
-1. First, we are going we are going to go to the
+1. First, we are going to go to the
   [koding/Apps](https://koding.com/Apps) listing, and click the
   [PureFTPd Installer](https://koding.com/Apps/pureftpd-installer). Next,
   click the **"Install Now"** button in the upper left.
