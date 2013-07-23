@@ -27,7 +27,7 @@ The following is an instructional video which approximately
 mirrors the steps below. It covers both App, and Manual,
 installations.
 
-<iframe width="680" height="450" src="//www.youtube.com/embed/h_l6hElWoj4" frameborder="0" allowfullscreen></iframe>
+<iframe width="680" height="450" src="//www.youtube.com/embed/9tsmL61HgXU" frameborder="0" allowfullscreen></iframe>
 
 
 
